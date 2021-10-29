@@ -23,13 +23,34 @@ class ScheduleController extends Controller
 
                 $filepath= $request->csv->move('Upload',$filename);
             }
-            dd($filepath);
+            //dd($filepath);
 
             $this->readCsv($filepath,$filename);
         }
     }
 
     public function readCsv($csvpath,$csvname){
+
+        $header=null;
+        $data=[];
+
+        if(($handle=fopen($csvpath,'r'))!==false){
+
+            while(($raw=fgetcsv($handle,1000,","))!==false){
+
+               if($header==null){
+                   $header=$raw;
+               }
+               else{
+                   $data[]=array_combine($header,$raw);
+                   
+               }
+            }
+
+            fclose($handle);
+        }
+
+        dd($data);
 
     }
 }
