@@ -26,3 +26,13 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 Route::get('/upload/csv',[ScheduleController::class,'upload'])->name('upload.csv');
 
 Route::post('/read/csv',[ScheduleController::class,'uploadCsv'])->name('read.csv');
+
+
+
+Route::middleware('shareData')->group(function(){
+    Route::get('/test/view1',[ScheduleController::class,'view1'])->name('test.view1');
+    Route::get('/test/view2',[ScheduleController::class,'view2'])->name('test.view2');
+    Route::get('/test/view3',[ScheduleController::class,'view3'])->name('test.view3');
+    Route::get('/test/view4',[ScheduleController::class,'view4'])->name('test.view4');
+});
+
