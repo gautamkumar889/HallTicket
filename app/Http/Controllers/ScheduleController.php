@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\studentRequest;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+
 
 class ScheduleController extends Controller
 {
@@ -71,5 +73,16 @@ class ScheduleController extends Controller
 
     public function view4(){
         return view('Hallticket.view4');
+    }
+
+    public function studentForm(){
+        
+        return view('Hallticket.studentForm');
+    }
+
+    public function studentStore(studentRequest $request){
+       
+        $validation=$request->validated();
+ 
     }
 }
