@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\ScheduleController;
+use Illuminate\Support\Facades\App;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,7 +16,8 @@ use App\Http\Controllers\ScheduleController;
 |
 */
 
-Route::get('/', function () {
+Route::get('/{lang?}', function ($lang) {
+    config(['app.locale'=>$lang]);
     return view('welcome');
 });
 
