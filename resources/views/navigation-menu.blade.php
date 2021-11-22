@@ -25,26 +25,26 @@
             </div>
 
             <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                <x-jet-nav-link href="{{ route('test.view1') }}" >
-                    {{ __('view1') }}
+                <x-jet-nav-link href="{{ route('product.form') }}" >
+                    {{ __('ADD Product') }}
                 </x-jet-nav-link>
             </div>
 
             <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                <x-jet-nav-link href="{{ route('test.view2') }}" >
-                    {{ __('view2') }}
+                <x-jet-nav-link href="{{ route('product.details') }}" >
+                    {{ __('View Product') }}
                 </x-jet-nav-link>
             </div>
 
             <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                <x-jet-nav-link href="{{ route('test.view3') }}" >
-                    {{ __('view3') }}
+                <x-jet-nav-link href="{{ route('form.student') }}" >
+                    {{ __('StudentForm') }}
                 </x-jet-nav-link>
             </div>
 
             <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                 <x-jet-nav-link href="{{ route('test.view4') }}" >
-                    {{ __('view4') }}
+                    {{ __('map') }}
                 </x-jet-nav-link>
             </div>
 

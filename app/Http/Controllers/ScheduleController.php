@@ -3,8 +3,13 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\studentRequest;
+use App\Models\StudentModel;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use Laravel\Socialite\Facades\Socialite;
+
+//spl_autoload_register('app/Autoload/autousefile.php');
 
 
 class ScheduleController extends Controller
@@ -13,7 +18,7 @@ class ScheduleController extends Controller
 
         $users=DB::table('users')->where('id','1')->toSql();
 
-        dd($users);
+       // dd($users);
 
         return view('HallTicket.upload');
     }
@@ -79,10 +84,20 @@ class ScheduleController extends Controller
         
         return view('Hallticket.studentForm');
     }
+    public function googleLogin(){
+        return Socialite::driver('google')->redirect();
+    }
 
     public function studentStore(studentRequest $request){
        
         $validation=$request->validated();
+
+        //$request=$request->except('_token');
+
+        $newStudent=$request->toArray();
+
+       // dd( $newStudent);
+        StudentModel::create($newStudent);
  
     }
 }

@@ -28,15 +28,15 @@
             </div>
             <div class=" w-96 h-full flex-col justify-evenly items-center">
                 <label class="font-serif font-bold m-2" for="e_no">Enter Your Enrollment_number</label>
-                <input class="w-96 h-10 p-1 font-serif border rounded" type="text" name="e_no" id="e_no"  placeholder="Enter your EnrolmentNumber">
+                <input class="w-96 h-10 p-1 font-serif border rounded" type="text" name="Enrollment_number" id="e_no"  placeholder="Enter your EnrolmentNumber">
             </div>
             <div class="w-96 h-full flex-col justify-evenly items-center ">
                 <label class="font-serif font-bold m-2" for="p_code">Enter your programme code</label>
-                <input class="w-96 h-10 p-1 font-serif border rounded" type="text" id="p_code" name="p_code" placeholder="Enter your programme code">
+                <input class="w-96 h-10 p-1 font-serif border rounded" type="text" id="programme_code" name="Programme_code" placeholder="Enter your programme code">
             </div>
             <div class="w-96 h-full flex-col justify-evenly items-center ">
-                <label class="font-serif font-bold m-2" for="c_code">Enter your course code</label>
-                <input class="w-96 h-10 p-1 font-serif border rounded" type="text" id="c_code" name="c_code" placeholder="Enter your course code">
+                <label class="font-serif font-bold m-2" for="course_code">Enter your course code</label>
+                <input class="w-96 h-10 p-1 font-serif border rounded" type="text" id="c_code" name="course_code" placeholder="Enter your course code">
             </div>
 
            <div>

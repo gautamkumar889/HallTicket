@@ -32,7 +32,7 @@
                 </label>
             </div>
 
-            <div class="flex items-center justify-end mt-4">
+            <div class="flex justify-evenly items-center justify-end mt-4">
                 @if (Route::has('password.request'))
                     <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('password.request') }}">
                         {{ __('Forgot your password?') }}
@@ -42,6 +42,7 @@
                 <x-jet-button class="ml-4">
                     {{ __('Log in') }}
                 </x-jet-button>
+               <a class="bg-gray-200 p-2 rounded shadow-md font-serif font-bold" href="{{route('google.login')}}">{{__('Google')}}</a>
             </div>
         </form>
     </x-jet-authentication-card>

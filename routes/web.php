@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\ScheduleController;
 use Illuminate\Support\Facades\App;
+use App\Http\Controllers\ProductController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,8 +17,8 @@ use Illuminate\Support\Facades\App;
 |
 */
 
-Route::get('/{lang?}', function ($lang) {
-    config(['app.locale'=>$lang]);
+Route::get('/', function () {
+    
     return view('welcome');
 });
 
@@ -31,6 +32,7 @@ Route::post('/read/csv',[ScheduleController::class,'uploadCsv'])->name('read.csv
 
 Route::get('/form/student',[ScheduleController::class,'studentForm'])->name('form.student');
 Route::post('/form/store',[ScheduleController::class,'studentStore'])->name('form.store');
+Route::get('/google/login',[ScheduleController::class,'googleLogin'])->name('google.login');
 
 Route::middleware('shareData')->group(function(){
     Route::get('/test/view1',[ScheduleController::class,'view1'])->name('test.view1');
@@ -39,4 +41,8 @@ Route::middleware('shareData')->group(function(){
     Route::get('/test/view4',[ScheduleController::class,'view4'])->name('test.view4');
     
 });
+
+Route::get('/product/form',[ProductController::class,'productForm'])->name('product.form');
+Route::post('/product/store',[ProductController::class,'productStore'])->name('product.store');
+Route::get('/product/details',[ProductController::class,'productDetails'])->name('product.details');
 

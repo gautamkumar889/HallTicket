@@ -26,9 +26,9 @@ class studentRequest extends FormRequest
         return [
             'name'=>'required|string', 
             'email'=>'required|email',
-            'e_no'=>'required|integer',
-            'p_code'=>'required',
-            'c_code'=>'required',
+            'Enrollment_number'=>'required|integer',
+            'Programme_code'=>'required',
+            'course_code'=>'required',
         ];
     }
 }
