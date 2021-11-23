@@ -43,20 +43,19 @@
                     <input type="file" name="image" class=" h-12 w-96 font-bold p-2 font-serif rounded border border-gray-200" >
                 </div>
            
-                <div  class="flex flex-col">
+                <div  class="flex h-auto flex-col justify-evenly items-center">
                     <label for="" class="font-serif font-bold m-2">Enter Varient Name(Multiple)</label>
                     <span class="varient_input" id="name-in"><input  type="text" name="varient_name[]" class=" h-12 w-96 font-bold p-1 font-serif rounded border border-gray-200"  placeholder="Enter One Or Mutiple Varient Name">*</span>
-                    <p id="add_var_name"></p>
                 </div>
-                <div class="flex flex-col">
+                <div class="flex h-auto flex-col justify-evenly items-center">
                     <label for="" class="font-serif font-bold m-2">Enter Varient Price(a/c to Name)</label>
-                    <input id="price-in" type="text" name="varient_price[]" class=" h-12 w-96 font-bold p-1 font-serif rounded border border-gray-200" placeholder="Enter Varient Price Regaring to Name">
-                    <p id="add_var_price"></p>
+                    <span id="price-in" ><input type="text" name="varient_price[]" class=" h-12 w-96 font-bold p-1 font-serif rounded border border-gray-200" placeholder="Enter Varient Price Regaring to Name">*</span>
+                    
                 </div>
        
              
                 <div class="flex flex-col">
-                    <input type="submit"  value="save" class="m-2 font-bold w-40 p-3 font-serif rounded shadow-xl" >
+                    <input type="submit"  value="save" class="m-2 bg-green-200 font-bold w-40 p-3 font-serif rounded shadow-xl" >
                 </div>
             @csrf
             </form>
@@ -70,8 +69,8 @@
     <script>
         $(function(){
            $('#addinput').on('click',function(){
-            $cloned=$('#name-in').clone().appendTo('#add_var_name');
-            $cloned=$('#price-in').clone().appendTo('#add_var_price');
+            $cloned=$('#name-in').clone().appendTo('#name-in');
+            $cloned=$('#price-in').clone().appendTo('#price-in');
 
            });
         })
