@@ -47,4 +47,5 @@ Route::post('/product/store',[ProductController::class,'productStore'])->name('p
 Route::get('/product/details',[ProductController::class,'productDetails'])->name('product.details');
 Route::get('/git/test',[ProductController::class,'dcgds']);
 Route::get('/git/test2',[ProductController::class,'dcgds']);
+Route::get('/git/test3',[ProductController::class,'dcgds']);
 
