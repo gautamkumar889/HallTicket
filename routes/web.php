@@ -45,4 +45,8 @@ Route::middleware('shareData')->group(function(){
 Route::get('/product/form',[ProductController::class,'productForm'])->name('product.form');
 Route::post('/product/store',[ProductController::class,'productStore'])->name('product.store');
 Route::get('/product/details',[ProductController::class,'productDetails'])->name('product.details');
+Route::get('/git/collabarion,function(){
+
+return true;
+});
 
