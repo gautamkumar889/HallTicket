@@ -40,7 +40,7 @@
             </div>
 
            <div>
-               <input class="p-2 bg-gray text-white font-serif border rounded m-2" type="submit" value="Submit">
+               <input class="p-2 bg-green-200 text-white font-serif border rounded m-2" type="submit" value="Submit">
            </div>
         @csrf
         </form>
