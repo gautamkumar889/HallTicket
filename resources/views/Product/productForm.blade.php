@@ -55,7 +55,7 @@
        
              
                 <div class="flex flex-col">
-                    <input type="submit"  value="save" class="m-2 bg-green-200 font-bold w-40 p-3 font-serif rounded shadow-xl" >
+                    <input type="submit"  value="save" class="m-2 bg-green-400 font-bold w-40 p-3 font-serif rounded shadow-xl" >
                 </div>
             @csrf
             </form>
