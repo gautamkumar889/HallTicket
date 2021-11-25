@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" integrity="sha512-wnea99uKIC3TJF7v4eKk4Y+lMz2Mklv18+r4na2Gn1abDRPPOeef95xTzdwGD9e6zXJBteMIhZ1+68QC5byJZw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <title class="font-bold font-serif ">PRODUCT FORM</title>
 </head>
@@ -45,11 +47,11 @@
            
                 <div  class="flex h-auto flex-col justify-evenly items-center">
                     <label for="" class="font-serif font-bold m-2">Enter Varient Name(Multiple)</label>
-                    <span class="varient_input" id="name-in"><input  type="text" name="varient_name[]" class=" h-12 w-96 font-bold p-1 font-serif rounded border border-gray-200"  placeholder="Enter One Or Mutiple Varient Name">*</span>
+                    <span class="varient_input" id="name-in" class="flex flex-wrap justify-center align-center h-auto w-96"><input  type="text" name="varient_name[]" class=" h-12 w-96 font-bold p-1 font-serif rounded border border-gray-200"  placeholder="Enter One Or Mutiple Varient Name"><i class="fa fa-close" id="close"></i> </span>
                 </div>
                 <div class="flex h-auto flex-col justify-evenly items-center">
                     <label for="" class="font-serif font-bold m-2">Enter Varient Price(a/c to Name)</label>
-                    <span id="price-in" ><input type="text" name="varient_price[]" class=" h-12 w-96 font-bold p-1 font-serif rounded border border-gray-200" placeholder="Enter Varient Price Regaring to Name">*</span>
+                    <span id="price-in" ><input type="text" name="varient_price[]" class=" h-12 w-96 font-bold p-1 font-serif rounded border border-gray-200" placeholder="Enter Varient Price Regaring to Name"><i class="fa fa-close" id="close"></i> </span>
                     
                 </div>
        
@@ -69,10 +71,15 @@
     <script>
         $(function(){
            $('#addinput').on('click',function(){
-            $cloned=$('#name-in').clone().appendTo('#name-in');
-            $cloned=$('#price-in').clone().appendTo('#price-in');
-
+            $cloned=$('#name-in').clone(true).appendTo('#name-in');
+            $cloned=$('#price-in').clone(true).appendTo('#price-in');
            });
+
+           $('#close').on('click',function(){
+               alert('close input');
+
+               $(this).closest('#name-in').remove();
+           })
         })
     </script>
 </body>
