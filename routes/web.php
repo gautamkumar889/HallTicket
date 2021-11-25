@@ -49,3 +49,7 @@ Route::get('/git/test',[ProductController::class,'dcgds']);
 Route::get('/git/test2',[ProductController::class,'dcgds']);
 Route::get('/git/test3',[ProductController::class,'dcgds']);
 
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
