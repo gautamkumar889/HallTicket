@@ -178,6 +178,7 @@ return [
         App\Providers\JetstreamServiceProvider::class,
         App\Providers\ViewDataProvider::class,
         Laravel\Socialite\SocialiteServiceProvider::class,
+        Yajra\DataTables\DataTablesServiceProvider::class,
 
     ],
 
