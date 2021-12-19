@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ScheduleController;
 use Illuminate\Support\Facades\App;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\AdminDashBoard;
 
 /*
 |--------------------------------------------------------------------------
@@ -45,7 +46,10 @@ Route::middleware('shareData')->group(function(){
 Route::get('/product/form',[ProductController::class,'productForm'])->name('product.form');
 Route::post('/product/store',[ProductController::class,'productStore'])->name('product.store');
 Route::get('/product/details',[ProductController::class,'productDetails'])->name('product.details');
-Route::get('/git/test',[ProductController::class,'dcgds']);
-Route::get('/git/test2',[ProductController::class,'dcgds']);
-Route::get('/git/test3',[ProductController::class,'dcgds']);
+
+//Dashboard Routes
+
+Route::get('/admin/dashboard',[AdminDashBoard::class,'dashboard'])->name('admin.dashboard');
+
+
 

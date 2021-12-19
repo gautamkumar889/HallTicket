@@ -40,6 +40,7 @@ class ProductController extends Controller
           for ($i=0; $i <count($request->varient_name) ; $i++) { 
 
                 $varients[$i]=['name'=>$request->varient_name[$i],'price'=>$request->varient_price[$i]];
+
                 
             }
            //dd($varients);
@@ -57,6 +58,20 @@ class ProductController extends Controller
 
             $product->save();
 
+            for ($i=0; $i <count($varients) ; $i++) { 
+
+                $varient=new Varient();
+
+                $varient->name=$varients[$i]['name'];
+                $varient->price=$varient[$i]['price'];
+                $varient->product_id=$product->id;
+                $varient->save();
+                
+            }
+
+
+           
+
 
         }
 
@@ -66,7 +81,7 @@ class ProductController extends Controller
 
     $product=Product::all();
 
-    dd($product);
+    //dd($product);
 
         return view('Product.productDetails');
 
