@@ -1,0 +1,23 @@
+.icon{
+    line-height:75px;
+}
+
+.nav-container ul li:hover a .icon{
+    transform: translateY(-45px);
+    background: rgb(126, 235, 99);
+    border: 6px solid gray;
+    border-radius:100%;
+    width:70px;
+    height:70px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.nav-container ul li  a .text{
+    opacity: 0;
+    transform:translateY(10px);
+}
+.nav-container ul li:hover a .text{
+    opacity: 1;
+    transform:translateY(10px);
+}
