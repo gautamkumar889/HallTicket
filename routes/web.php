@@ -42,6 +42,11 @@ Route::middleware('shareData')->group(function(){
     Route::get('/test/view4',[ScheduleController::class,'view4'])->name('test.view4');
     Route::get('/test/view5',[ScheduleController::class,'view3'])->name('test.view5');
     Route::get('/test/view6',[ScheduleController::class,'view4'])->name('test.view6');
+    Route::get('/test/view2',[ScheduleController::class,'view2'])->name('test.view2');
+    Route::get('/test/view3',[ScheduleController::class,'view3'])->name('test.view3');
+    Route::get('/test/view4',[ScheduleController::class,'view4'])->name('test.view4');
+    Route::get('/test/view5',[ScheduleController::class,'view3'])->name('test.view5');
+    Route::get('/test/view6',[ScheduleController::class,'view4'])->name('test.view6');
     
 });
 
